@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CyleCellID" id="jMj-09-1qg" customClass="CycleCollectionViewCell" customModule="CycleCollection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="267" height="129"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="MuA-dj-LWp">
+                        <rect key="frame" x="0.0" y="0.0" width="267" height="129"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uap-Rc-T0P">
+                        <rect key="frame" x="0.0" y="99" width="267" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不知名的君" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rw-vg-Xxy">
+                                <rect key="frame" x="15" y="5" width="237" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.33538732389999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Rw-vg-Xxy" firstAttribute="leading" secondItem="uap-Rc-T0P" secondAttribute="leading" constant="15" id="O21-6q-ylU"/>
+                            <constraint firstItem="8Rw-vg-Xxy" firstAttribute="centerX" secondItem="uap-Rc-T0P" secondAttribute="centerX" id="ORj-Zr-e1z"/>
+                            <constraint firstItem="8Rw-vg-Xxy" firstAttribute="centerY" secondItem="uap-Rc-T0P" secondAttribute="centerY" id="Ts8-lh-ezO"/>
+                            <constraint firstItem="8Rw-vg-Xxy" firstAttribute="top" secondItem="uap-Rc-T0P" secondAttribute="top" constant="5" id="hoo-ac-akc"/>
+                            <constraint firstAttribute="height" constant="30" id="lq6-4y-NR9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="uap-Rc-T0P" secondAttribute="bottom" id="5hM-9J-3Nc"/>
+                <constraint firstItem="MuA-dj-LWp" firstAttribute="top" secondItem="jMj-09-1qg" secondAttribute="top" id="HvB-pe-a5F"/>
+                <constraint firstAttribute="trailing" secondItem="MuA-dj-LWp" secondAttribute="trailing" id="Shs-9F-2Kd"/>
+                <constraint firstAttribute="bottom" secondItem="MuA-dj-LWp" secondAttribute="bottom" id="gJa-fu-pSd"/>
+                <constraint firstAttribute="trailing" secondItem="uap-Rc-T0P" secondAttribute="trailing" id="gYS-ji-W0q"/>
+                <constraint firstItem="uap-Rc-T0P" firstAttribute="leading" secondItem="jMj-09-1qg" secondAttribute="leading" id="jn1-l7-JmB"/>
+                <constraint firstItem="MuA-dj-LWp" firstAttribute="leading" secondItem="jMj-09-1qg" secondAttribute="leading" id="tdE-cf-Ylt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SYD-fs-uso"/>
+            <size key="customSize" width="267" height="129"/>
+            <connections>
+                <outlet property="iconImageView" destination="MuA-dj-LWp" id="1DV-gV-GcJ"/>
+                <outlet property="titleLabel" destination="8Rw-vg-Xxy" id="CyB-uq-ct7"/>
+            </connections>
+            <point key="canvasLocation" x="142.5" y="93.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172.5" height="103.5"/>
+    </resources>
+</document>

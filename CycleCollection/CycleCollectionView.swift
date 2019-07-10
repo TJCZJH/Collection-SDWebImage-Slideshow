@@ -15,22 +15,20 @@ class CycleCollectionView: UIView {
     //控件属性
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    
-    
     //定义属性
     var cycleTimer : Timer?
     var cycleModels : [CycleModel]?
     {
         didSet
         {
-            //1.刷新collectionView
+            // 1.刷新collectionView
             collectionView.reloadData()
-            //2.设置pageControl个数
+            // 2.设置pageControl个数
             pageControl.numberOfPages = cycleModels?.count ?? 0
-            //3.默认滚动到中间某个位置
+            // 3.默认滚动到中间某个位置
             let indexPath = NSIndexPath(item:(cycleModels?.count ?? 0) * 10, section: 0)
             collectionView.scrollToItem(at: indexPath as IndexPath, at: .left, animated: false)
-            //4.添加定时器
+            // 4.添加定时器
             removeCycleTiemr()
             addCycleTimer()
         }
@@ -55,7 +53,7 @@ class CycleCollectionView: UIView {
     }
 }
 
-//提供一个快速创建View的类方法
+// 提供一个快速创建View的类方法
 extension CycleCollectionView
 {
     class func recommendCycleView() -> CycleCollectionView
@@ -87,9 +85,9 @@ extension CycleCollectionView : UICollectionViewDelegate
 {
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
-        //1.获取滚动的偏移量
+        // 1.获取滚动的偏移量
         let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
-        //2.计算pageControl的currentIndex
+        // 2.计算pageControl的currentIndex
         pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModels?.count ?? 1)
     }
     
@@ -114,15 +112,16 @@ extension CycleCollectionView{
     
     private func removeCycleTiemr()
     {
-        cycleTimer?.invalidate() //从运行循环中移除
+        // 从运行循环中移除
+        cycleTimer?.invalidate()
         cycleTimer = nil
     }
     @objc private func scrollToNext() {
-        //1.获取滚动的偏移量
+        // 1.获取滚动的偏移量
         let currentOffsetX = collectionView.contentOffset.x
         let offsetX = currentOffsetX + collectionView.bounds.width
         
-        //2.滚动该位置
-        collectionView.setContentOffset(CGPoint(x:offsetX,y:0), animated: true)
+        // 2.滚动该位置
+        collectionView.setContentOffset(CGPoint(x:offsetX , y:0), animated: true)
     }
 }

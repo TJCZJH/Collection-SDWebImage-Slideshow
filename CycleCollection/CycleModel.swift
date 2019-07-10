@@ -1,6 +1,6 @@
 //
 //  CycleModel.swift
-//  DYZB
+//  CycleCollectionView
 //
 //  Created by Admin on 10/03/2018.
 //  Copyright © 2018 Admin. All rights reserved.
